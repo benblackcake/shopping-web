@@ -1,0 +1,319 @@
+$main-color: #474646;
+$lighten-color: lighten($main-color, 30);
+@mixin menu_paddern($pad-left, $width) {
+  padding-left: $pad-left;
+  display: block;
+  width: $width;
+  text-decoration: none;
+  line-height: 36px;
+}
+
+%nostyle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 18px;
+  font-family: 微軟正黑體;
+  line-height: 1.4;
+  color: #474646;
+}
+.page-header {
+  font-size: 16px;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.cart-items-container {
+  margin: 5% 0;
+}
+.top-text h4 {
+  margin: 0px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+a {
+  color: $main-color;
+  text-decoration: none;
+  transition-property: background;
+  transition-duration: 0.5s;
+}
+
+a:hover {
+  color: darken($main-color, 50);
+  background: lighten($main-color, 60);
+}
+/*Top-menu設計*/
+.item {
+  flex-basis: 1;
+}
+
+.item-a {
+  width: 250px;
+}
+
+.item-c {
+  width: 250px;
+}
+
+.top-menu {
+  .item-a a {
+    @include menu_paddern(15px, 70px);
+  }
+  .item-c a {
+    @include menu_paddern(15px, 35px);
+  }
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+  }
+  h2 {
+    margin: 0px;
+    height: 30px;
+  }
+  .menu-content {
+    /*設計menu內容的容器*/
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*購物車數量*/
+
+.shop-cart {
+  margin-left: 30px;
+  position: relative;
+  a::before {
+    content: "1";
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    top: 0px;
+    left: 70%;
+    color: #2b2a2a;
+    background: #dfdada;
+    border-radius: 50%;
+    /* border-right: transparent 8px solid;
+        border-bottom: transparent 8px solid;
+        border-left: transparent 8px solid; */
+  }
+}
+
+/*訂閱文字*/
+.subscitption {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  ul {
+    @extend %nostyle-list;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.email {
+  margin-top: 15px;
+  input {
+    border-color: #6b6a6a;
+    border-style: solid;
+    padding-left: 32px;
+    width: 600px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  i {
+    position: relative;
+    left: 32px;
+  }
+}
+.send input {
+  border-style: none;
+  margin-top: 15px;
+  background: black;
+  color: white;
+  height: 50px;
+  width: 632px;
+  margin-left: 20px;
+  transition-property: background;
+  transition-duration: 0.5s;
+
+  &:hover {
+    background: #dfdada;
+    color: #2b2a2a;
+  }
+}
+
+/*選項*/
+.option {
+  margin-top: 2%;
+  &::before {
+    content: "<";
+  }
+  a:hover {
+    background-color: none;
+  }
+}
+.cart-title {
+  margin-top: 2%;
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+  }
+  li:nth-of-type(1) {
+    margin-right: 61%;
+  }
+  li:nth-of-type(2) {
+    margin-right: 8%;
+  }
+  li:nth-of-type(3) {
+    margin-right: 13.5%;
+  }
+}
+/*內容*/
+.cart-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Items-intro {
+  display: flex;
+  flex: 0 0 62%;
+  align-items: center;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+  .items-name {
+    display: flex;
+    ul {
+      @extend %nostyle-list;
+    }
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+    .sytle-color {
+      color: $lighten-color;
+    }
+    a {
+      text-decoration: underline;
+      background: none;
+    }
+    li:nth-of-type(3) {
+      margin-top: 20%;
+    }
+  }
+}
+.detail {
+  display: flex;
+  align-items: center;
+  flex: 0 0 38%;
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+  }
+  li:nth-of-type(1) {
+    margin-left: 45%;
+    margin-right: 10.5%;
+  }
+  li:nth-of-type(2) {
+    margin-left: 35%;
+  }
+  li:nth-of-type(3) {
+    margin-left: 95%;
+  }
+  input {
+    width: 50px;
+  }
+}
+/*商品總計*/
+
+.items-account {
+    display: flex;
+    margin-bottom: 10%;
+  .discount {
+    flex-grow: 1;
+    input {
+      width: 150px;
+    }
+  }
+  .count {
+    position: relative;
+    flex-grow: 1;
+    margin-left: 25%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      max-width: 100%;
+      @extend %nostyle-list;
+      text-align: right;
+    }
+    li {
+      margin-top: 13%;
+    }
+    input {
+        position: absolute;
+        border-style: none;
+        background: black;
+        color: white;
+        width: 318px;
+        height: 50px;
+        transition-property: background;
+        transition-duration: 0.5s;
+        &:hover {
+            background: #dfdada;
+            color: #2b2a2a;
+        }
+    }
+  }
+}
+
+/*結尾*/
+.page-footer {
+  color: white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: white;
+    display: block;
+    line-height: 50px;
+    &:hover {
+      background-color: #dfdada;
+      color: black;
+    }
+  }
+}
+
+.contact {
+  background: #2b2a2a;
+  height: 50px;
+  ul {
+    @extend %nostyle-list;
+    display: flex;
+  }
+  li {
+    flex: 0 0 20%;
+    text-align: center;
+  }
+}
+.copyright {
+  background-color: rgb(206, 199, 199);
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}

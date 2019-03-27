@@ -1,0 +1,318 @@
+@charset "UTF-8";
+.top-menu ul, .contact ul, .option ul, .introduce ul, .operation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 16px;
+  font-family: 微軟正黑體;
+  line-height: 1.4;
+  color: #474646;
+}
+
+.top-text h4 {
+  margin: 0px;
+  color: white;
+  background-color: black;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+a {
+  color: #474646;
+  text-decoration: none;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+a:hover {
+  color: black;
+  background: #e0dfdf;
+}
+
+/*Top-menu設計*/
+.item {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+}
+
+.item-a {
+  width: 250px;
+}
+
+.item-c {
+  width: 250px;
+}
+
+.top-menu .item-a a {
+  padding-left: 15px;
+  display: block;
+  width: 70px;
+  text-decoration: none;
+  line-height: 36px;
+}
+
+.top-menu .item-c a {
+  padding-left: 15px;
+  display: block;
+  width: 35px;
+  text-decoration: none;
+  line-height: 36px;
+}
+
+.top-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-menu h2 {
+  margin: 0px;
+  height: 30px;
+}
+
+.top-menu .menu-content {
+  /*設計menu內容的容器*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*購物車數量*/
+.shop-cart {
+  margin-left: 30px;
+  position: relative;
+}
+
+.shop-cart a::before {
+  content: "1";
+  display: block;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  line-height: 20px;
+  top: 0px;
+  left: 70%;
+  color: #2b2a2a;
+  background: #dfdada;
+  border-radius: 50%;
+  /* border-right: transparent 8px solid;
+        border-bottom: transparent 8px solid;
+        border-left: transparent 8px solid; */
+}
+
+/*結尾*/
+.page-footer {
+  color: white;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-footer a {
+  color: white;
+  display: block;
+  line-height: 50px;
+}
+
+.page-footer a:hover {
+  background-color: #dfdada;
+  color: black;
+}
+
+.contact {
+  background: #2b2a2a;
+  height: 50px;
+}
+
+.contact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  text-align: center;
+}
+
+.copyright {
+  background-color: #cec7c7;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+/*此頁面的主要內容*/
+.option {
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.option ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.option li + li::before {
+  content: ">";
+  font-size: 12px;
+  text-align: center;
+  color: #949292;
+}
+
+.option a:hover {
+  background: none;
+}
+
+/*商品簡介*/
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+}
+
+.introduce {
+  background: gold;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+}
+
+.introduce .picture {
+  background-size: cover;
+}
+
+.introduce ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.introduce li {
+  margin-bottom: 4%;
+}
+
+/*商品訂購*/
+.operation {
+  background: rgba(238, 216, 118, 0.774);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  font-size: 20px;
+}
+
+.operation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.operation li {
+  margin-bottom: 4%;
+}
+
+.operation li:first-of-type {
+  margin-bottom: 1%;
+}
+
+.operation h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.operation h6 {
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 3%;
+}
+
+.operation select {
+  width: 80%;
+  height: 60px;
+  color: #474646;
+  background: #ececec;
+}
+
+.operation .numbers input {
+  width: 15%;
+  height: 40px;
+  background: #ececec;
+}
+
+.operation .AddChart input {
+  border-style: none;
+  margin-top: 15px;
+  background: black;
+  color: white;
+  width: 80%;
+  height: 60px;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.operation .AddChart input:hover {
+  background: #dfdada;
+  color: #2b2a2a;
+}
+
+.operation .AddChart input:focus {
+  background: #c7bfbf;
+}
+
+.operation hr {
+  border: 0;
+  background-color: #7a7979;
+  height: 2px;
+  width: 90%;
+  margin: 0;
+}
+
+.item-others {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.item-others li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+/*# sourceMappingURL=items-styles.css.map */
